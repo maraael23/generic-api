@@ -103,12 +103,11 @@ loadScripts(document, 'script');</script>
  The <code>GenericAPI</code> class provides a high-level abstraction for interacting with a Modbus TCP/IP server.
  It encapsulates the complexities of direct Modbus client operations, offering simplified methods
  to control digital outputs (coils), write numerical values to registers, and read digital inputs
- from a PLC (Programmable Logic Controller) or similar industrial hardware.
+ from a PLC (Programmable Logic Controller).
  </p>
 
  <p>
- **Context Note:** While the broader project (e.g., Human-Machine Interface (HMI) and overarching system control)
- may primarily utilize OPC UA for higher-level data exchange and communication, this specific <code>GenericAPI</code>
+ **Context Note:** While the broader project primarily utilizes OPC UA for higher-level data exchange and communication, this specific <code>GenericAPI</code>
  class is dedicated to handling direct, low-level Modbus TCP/IP communication. This Modbus interface often
  serves as the direct connection layer to the physical PLC hardware, operating below the OPC UA layer.
  </p>
