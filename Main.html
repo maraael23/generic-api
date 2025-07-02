@@ -90,7 +90,7 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="block"><p>
  The `Main` class serves as the singular entry point for the Elevator Simulation application.
- Its primary responsibility is to orchestrate the initialization of all core system components,
+ Its primary responsibility is to manage the initialization of all core system components,
  including the interfaces to the elevator hardware (<a href="ElevatorAPI.html" title="class in Unnamed Package"><code>ElevatorAPI</code></a>), the mechanism for
  managing user requests (<a href="RequestHandler.html" title="class in Unnamed Package"><code>RequestHandler</code></a>), and the central logic for controlling the
  elevator's behavior (<a href="ElevatorController.html" title="class in Unnamed Package"><code>ElevatorController</code></a>).
@@ -185,10 +185,7 @@ loadScripts(document, 'script');</script>
  <ol>
  <li>
  <b>Initialize <a href="ElevatorAPI.html" title="class in Unnamed Package"><code>ElevatorAPI</code></a>:</b>
- The `ElevatorAPI` object is created to provide the low-level communication interface
- to the simulated Modbus-enabled PLC (Programmable Logic Controller) that controls
- the elevator hardware. This component is crucial for sending commands to and receiving
- data from the Modbus-enabled PLC.
+
  </li>
  <li>
  <b>Initialize <a href="RequestHandler.html" title="class in Unnamed Package"><code>RequestHandler</code></a>:</b>
@@ -201,11 +198,7 @@ loadScripts(document, 'script');</script>
  </li>
  <li>
  <b>Initialize <a href="ElevatorController.html" title="class in Unnamed Package"><code>ElevatorController</code></a>:</b>
- The `ElevatorController` is initialized. This component encapsulates the
- core logic for managing the elevator's movement, processing various types of
- requests (e.g., floor calls, emergency stops), and determining the elevator's
- current operational state. It utilizes the <a href="ElevatorAPI.html" title="class in Unnamed Package"><code>ElevatorAPI</code></a> to control the
- physical (simulated) elevator.
+ 
  </li>
  <li>
  <b>Start Request Producer:</b>
@@ -238,13 +231,7 @@ loadScripts(document, 'script');</script>
  </li>
  <li>
  <b>Introduce Simulation Delay:</b> A controlled delay of 200 milliseconds (0.2 seconds)
- is introduced using `Thread.sleep(200)`. This `sleep()` is crucial for:
- <ul>
- <li>Simulating a more realistic time progression for the elevator's operations.</li>
- <li>Preventing the loop from consuming excessive CPU resources by running too fast.</li>
- <li>Making the console output and simulation progress observable and understandable.</li>
- <li>Allowing other threads (like the <a href="RequestHandler.html" title="class in Unnamed Package"><code>RequestHandler</code></a>'s producer thread) to get CPU time.</li>
- </ul>
+ is introduced using `Thread.sleep(200)`.
  </li>
  </ol>
  </li>

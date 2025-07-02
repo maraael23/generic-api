@@ -308,7 +308,7 @@ de.re.easymodbus.exceptions.ModbusException,
 <a href="https://docs.oracle.com/en/java/javase/24/docs/api/java.base/java/lang/InterruptedException.html" title="class or interface in java.lang" class="external-link">InterruptedException</a></span></div>
 <div class="block">Sends a momentary "pulse" to a specific Modbus output coil. This operation involves
  setting the coil's state to `true` (ON), introducing a brief delay (300 milliseconds)
- to ensure the PLC (Programmable Logic Controller) registers the change, and then
+ to ensure the PLC registers the change, and then
  immediately setting the coil back to `false` (OFF). This method is commonly used to
  simulate transient events, such as pressing a physical button or triggering a single-shot
  action on the connected hardware. All interactions with the Modbus client within this
